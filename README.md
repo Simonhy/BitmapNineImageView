@@ -35,7 +35,7 @@
 ## 注意：
    要使用钉钉的圆形背景，必须引入一个圆形的图片，我这使用的是 
   compile 'liji.library.dev:circleimageview:0.1.0' 
-# 使用方式:
+## 引入方式:
  Step 1
  Add it in your root build.gradle at the end of repositories:
 ## 
