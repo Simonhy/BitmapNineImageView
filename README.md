@@ -1,11 +1,40 @@
 ## libary
   微信和钉钉的九宫格，后期增加QQ的讨论组组合头像
  
-## 使用
-   DialogUtils. DialogUtil.createComfirmDialog(this); 
-   或者DialogUtil.createOnlyTitleComfirmDialog(this);
-   设置了按钮的监听,表示有两个按钮,默认否/是,如果没有设置监听,表示只有一个确定按钮
-    
+ ## 第一种  钉钉
+
+     CombineBitmap.init(this)
+                .setLayoutManager(new DingLayoutManager()) // 必选， 设置图片的组合形式，支持WechatLayoutManager、DingLayoutManager
+                .setSize(80) // 必选，组合后Bitmap的尺寸，单位dp
+                .setGap(1)
+                .setPlaceholder(R.mipmap.ic_launcher) // 单个Bitmap加载失败的默认显示图片
+                .setUrls(urls) // 要加载的图片url数组
+                .setImageView(imageView)
+                .build();
+
+
+##  第二种 设置图片质量
+    CombineBitmap.init(this)
+                .setLayoutManager(new DingLayoutManager(Bitmap.Config.RGB_565)) // 必选， 设置图片的组合形式，支持WechatLayoutManager、DingLayoutManager
+                .setSize(80) // 必选，组合后Bitmap的尺寸，单位dp
+                .setGap(1)
+                .setPlaceholder(R.mipmap.ic_launcher) // 单个Bitmap加载失败的默认显示图片
+                .setUrlList(list) // 要加载的图片url数组
+                .setImageView(imageView)
+                .build();
+## 第三种  微信九宫格
+    CombineBitmap.init(this)
+                .setLayoutManager(new WechatLayoutManager()) // 必选， 设置图片的组合形式，支持WechatLayoutManager、DingLayoutManager
+                .setSize(80) // 必选，组合后Bitmap的尺寸，单位dp
+                .setGap(1)
+                .setPlaceholder(R.mipmap.ic_launcher) // 单个Bitmap加载失败的默认显示图片
+                .setUrlList(list) // 要加载的图片url数组
+                .setImageView(imageView)
+                .build();
+
+## 注意：
+   要使用钉钉的圆形背景，必须引入一个圆形的图片，我这使用的是 
+  compile 'liji.library.dev:circleimageview:0.1.0' 
 # 使用方式:
  Step 1
  Add it in your root build.gradle at the end of repositories:
