@@ -1,5 +1,6 @@
 ## libary
   微信和钉钉的九宫格，后期增加QQ的讨论组组合头像 
+  修改 https://github.com/SheHuan/CombineBitmap
 ## 当前最新版本（版本号添加 V）V1.2
    新增微信的构造方法，传递参数，兼容前版本
  
@@ -56,3 +57,5 @@
 # 使用方式可查看 
   [wiki一](https://github.com/Simonhy/libary/wiki/%E4%BF%AE%E6%94%B9https:--github.com-SheHuan-CombineBitmaps)  
   [wiki二](https://github.com/Simonhy/libary/wiki/%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
+# 感谢
+  https://github.com/SheHuan/CombineBitmap
