@@ -5,9 +5,11 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 
 public class WechatLayoutManager implements ILayoutManager {
+    private Bitmap.Config config = Bitmap.Config.ARGB_8888;
+
     @Override
     public Bitmap combineBitmap(int size, int subSize, int gap, int gapColor, Bitmap[] bitmaps) {
-        Bitmap result = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
+        Bitmap result = Bitmap.createBitmap(size, size, config);
         Canvas canvas = new Canvas(result);
         if (gapColor == 0) {
             gapColor = Color.WHITE;
@@ -29,7 +31,7 @@ public class WechatLayoutManager implements ILayoutManager {
                     if (!bitmaps[i].isRecycled() && null != bitmaps[i]) {
                         bitmaps[i] = null;
                     }
-                }catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -111,5 +113,12 @@ public class WechatLayoutManager implements ILayoutManager {
             canvas.drawBitmap(subBitmap, x, y, null);
         }
         return result;
+    }
+
+    public WechatLayoutManager() {
+    }
+
+    public WechatLayoutManager(Bitmap.Config config) {
+        this.config = config;
     }
 }
