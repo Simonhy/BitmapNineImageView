@@ -48,7 +48,7 @@
  Step 2. Add the dependency
 ## 
 	dependencies {
-	        compile 'com.github.Simonhy:DialogDemo:v1.0'
+	        implementation 'com.github.Simonhy:libary:1.1'
 	}
 
 # 使用方式可查看 
